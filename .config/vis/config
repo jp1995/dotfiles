@@ -1,0 +1,7 @@
+colors.override.terminal=true
+colors.scheme=kappa
+visualizer.spectrum.smoothing.mode=sgs
+visualizer.sgs.smoothing.passes=1
+visualizer.spectrum.bar.width=1
+visualizer.spectrum.falloff.mode=fill
+visualizer.spectrum.bar.spacing=0

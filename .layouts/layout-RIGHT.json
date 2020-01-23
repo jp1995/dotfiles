@@ -1,0 +1,32 @@
+[
+{
+	"border": "normal",
+		"floating": "auto_off",
+		"fullscreen_mode": 0,
+		"layout": "splith",
+		"percent": null,
+		"type": "con",
+		"nodes": [
+		{
+			"border": "pixel",
+			"current_border_width": 0,
+			"floating": "auto_off",
+			"geometry": {
+				"height": 894,
+				"width": 1900,
+				"x": 1090,
+				"y": 513
+			},
+			"name": "^Mozilla Firefox$",
+			"percent": 1,
+			"swallows": [
+			{
+				"class": "^Navigator$"
+				"instance": "^Navigator$"
+			}
+			],
+			"type": "con"
+		}
+		]
+}
+]
