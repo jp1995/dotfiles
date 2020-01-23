@@ -18,8 +18,7 @@ exec firefox
 #User defined keybinds
 bindsym $mod+l exec /home/johan/i3lm/layout_manager.sh
 bindsym $mod+f exec /home/johan/scripts/dolphin.sh
-bindsym $mod+i exec /home/johan/scripts/incognito.sh
-bindsym $mod+c exec /home/johan/scripts/hide.sh
+bindsym $mod+c exec /home/johan/scripts/show_desktop.sh
 bindsym $mod+a exec /home/johan/scripts/sharenix.sh
 bindsym $mod+bracketleft exec /home/johan/.config/polybar/launch_main.sh
 bindsym $mod+bracketright exec /home/johan/.config/polybar/launch_right.sh
