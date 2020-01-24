@@ -23,7 +23,7 @@ bindsym $mod+a exec /home/johan/scripts/sharenix.sh
 bindsym $mod+bracketleft exec /home/johan/.config/polybar/launch_main.sh
 bindsym $mod+bracketright exec /home/johan/.config/polybar/launch_right.sh
 bindsym $mod+space exec /home/johan/scripts/keymap.sh
-bindsym $mod+t exec gnome-terminal
+bindsym $mod+t exec kitty
 bindsym $mod+d exec rofi -show run
 bindsym $mod+q kill
 bindsym $mod+r mode "resize"
@@ -65,13 +65,13 @@ workspace 21 output DisplayPort-2
 workspace 22 output DisplayPort-1
 
 #General gaps values
-gaps inner 20
+gaps inner 10
 gaps outer 0
 
 # Workspace specific gaps values:
-workspace 2 gaps inner 10
+workspace 2 gaps inner 15
 workspace 2 gaps outer 0
-workspace 2 gaps vertical 83
+workspace 2 gaps vertical 80
 workspace 5 gaps inner 0
 workspace 5 gaps outer 0
 
