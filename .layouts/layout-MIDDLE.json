@@ -4,20 +4,20 @@
 		"floating": "auto_off",
 		"fullscreen_mode": 0,
 		"layout": "splith",
-		"percent": 1,
+		"percent": null,
 		"type": "con",
 		"nodes": [
 		{
 			"border": "normal",
 			"floating": "auto_off",
-			"layout": "splitv",
-			"percent": 0.5,
+			"layout": "splith",
+			"percent": 1,
 			"type": "con",
 			"nodes": [
 			{
 				"border": "normal",
 				"floating": "auto_off",
-				"layout": "splith",
+				"layout": "splitv",
 				"percent": 0.5,
 				"type": "con",
 				"nodes": [
@@ -26,16 +26,35 @@
 					"current_border_width": 0,
 					"floating": "auto_off",
 					"geometry": {
-						"height": 410,
-						"width": 642,
+						"height": 232,
+						"width": 939,
 						"x": 0,
 						"y": 0
 					},
-					"name": "johan@johan-pc:~",
-					"percent": 1,
+					"name": "johan@kappa:~",
+					"percent": 0.5,
 					"swallows": [
 					{
-						"instance": "^gnome-terminal-server$"
+						"instance": "^kitty$"
+					}
+					],
+					"type": "con"
+				},
+				{
+					"border": "pixel",
+					"current_border_width": 0,
+					"floating": "auto_off",
+					"geometry": {
+						"height": 232,
+						"width": 939,
+						"x": 0,
+						"y": 0
+					},
+					"name": "johan@kappa:~",
+					"percent": 0.5,
+					"swallows": [
+					{
+						"instance": "^kitty$"
 					}
 					],
 					"type": "con"
@@ -47,40 +66,21 @@
 				"current_border_width": 0,
 				"floating": "auto_off",
 				"geometry": {
-					"height": 410,
-					"width": 642,
-					"x": 0,
-					"y": 0
+					"height": 1015,
+					"width": 955,
+					"x": 2045,
+					"y": 465
 				},
-				"name": "johan@johan-pc:~",
+				"name": "config — ~/.config/i3 — Atom",
 				"percent": 0.5,
 				"swallows": [
 				{
-					"instance": "^gnome-terminal-server$"
+					"instance": "^atom$"
 				}
 				],
 				"type": "con"
 			}
 			]
-		},
-		{
-			"border": "pixel",
-			"current_border_width": 0,
-			"floating": "auto_off",
-			"geometry": {
-				"height": 1015,
-				"width": 955,
-				"x": 2045,
-				"y": 465
-			},
-			"name": "config — i3 — ~/.config/i3 — Atom",
-			"percent": 0.5,
-			"swallows": [
-			{
-				"instance": "^atom$"
-			}
-			],
-			"type": "con"
 		}
 	]
 }
