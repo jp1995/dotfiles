@@ -3,7 +3,7 @@ rofi.modi:                           run
 "Window opacity" Set from: Default
 rofi.opacity:                        100
 "Window width" Set from: Default
-rofi.width:                          28
+rofi.width:                          18
 "Number of lines" Set from: Default
 rofi.lines:                          2
 "Number of columns" Set from: Default
@@ -28,7 +28,7 @@ rofi.padding:                        1
 "Y-offset relative to location" Set from: Default
 rofi.yoffset:                        -469
 "X-offset relative to location" Set from: Default
-rofi.xoffset:                        2296
+rofi.xoffset:                        773
 "Always show number of lines" Set from: Default
 rofi.fixed-num-lines:                false
 "Terminal to use" Set from: Default

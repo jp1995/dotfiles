@@ -13,6 +13,8 @@ exec /home/johan/scripts/layout.sh
 exec discord
 exec atom /home/johan/.config/i3/config
 exec picom
+exec kitty -e neofetch
+exec kitty -e spt
 exec firefox
 
 #User defined keybinds
