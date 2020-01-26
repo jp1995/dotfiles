@@ -37,11 +37,11 @@ fi
 
 # Print edgy shit about the weather
 if grep -qi 'rain' <<< $condition; then
-    printf " It's raining"
+    printf " It's raining!"
 elif grep -qi 'partly-cloudy' <<< $condition; then
     printf " Kinda grey"
 elif grep -qi 'cloudy' <<< $condition; then
-    printf " Grey"
+    printf " Shit weather"
 elif grep -qi 'clear-day' <<< $condition; then
     printf " It's a super nice day today wooow!"
 elif grep -qi 'clear-night' <<< $condition; then

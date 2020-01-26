@@ -74,7 +74,7 @@ if ${use_color} ; then
 			eval $(dircolors -b /etc/DIR_COLORS)
 		fi
 	fi
-	# For this to work you need to put a copy of your .bashrc file in /root
+	# For this to work as su you need to put a copy of your .bashrc file in /root
 	if [[ ${EUID} == 0 ]] ; then
 		PS1="\[\033[0;37m\]\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200\")[\[\033[38;5;196m\]\h\[\033[0;37m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;37m\]]\n\[\033[0;37m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]"
 	else
