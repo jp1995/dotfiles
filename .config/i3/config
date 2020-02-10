@@ -13,8 +13,6 @@ exec /home/johan/scripts/layout.sh
 exec discord
 exec atom /home/johan/.config/i3/config
 exec picom
-exec kitty -e neofetch
-exec kitty -e spt
 exec firefox
 
 #User defined keybinds
@@ -22,11 +20,13 @@ bindsym $mod+l exec /home/johan/i3lm/layout_manager.sh
 bindsym $mod+f exec /home/johan/scripts/dolphin.sh
 bindsym $mod+c exec /home/johan/scripts/show_desktop.sh
 bindsym $mod+a exec /home/johan/scripts/sharenix.sh
+bindsym $mod+x exec /home/johan/scripts/kpl/kpl_local_main.sh
+bindsym $mod+space exec /home/johan/scripts/keymap.sh
 bindsym $mod+bracketleft exec /home/johan/.config/polybar/launch_main.sh
 bindsym $mod+bracketright exec /home/johan/.config/polybar/launch_right.sh
-bindsym $mod+space exec /home/johan/scripts/keymap.sh
 bindsym $mod+t exec kitty
-bindsym $mod+d exec rofi -show run
+bindsym $mod+w exec firefox
+bindsym $mod+d exec rofi -show run -m DisplayPort-2
 bindsym $mod+q kill
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+f fullscreen toggle
@@ -76,10 +76,15 @@ workspace 2 gaps outer 0
 workspace 2 gaps vertical 80
 workspace 5 gaps inner 0
 workspace 5 gaps outer 0
+workspace 6 gaps inner 0
+workspace 6 gaps outer 0
 
 assign [instance="^Steam$"] 4
+assign [instance="^discord$"] 1
 assign [instance="xfce4-notifyd"] 3
 assign [instance="^Navigator$"] 3
+assign [instance="^chatterino$"] 6
+assign [instance="^vlc$"] 6
 for_window [class="RocketLeague"] move to workspace $ws5
 for_window [class="xfce4-notifyd"] [name="xfce4-notifyd"] move to workspace $ws3
 
@@ -102,8 +107,8 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating

@@ -3,7 +3,7 @@
 pac=$(checkupdates | wc -l)
 aur=$(yay -u | wc -l)
 
-check=$((pac + aur))
+check=$(($pac + $aur))
 if [[ "$check" != "0" ]]
 then
     echo "$pac %{F#25232A}%{F-} $aur"
