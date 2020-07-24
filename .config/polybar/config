@@ -48,13 +48,13 @@ padding-right = 1
 offset-x = 0
 offset-y = 0
 
-tray-detached = false
-tray-position = right
-tray-offset-x = 0
-tray-offset-y = 0
-tray-maxsize = 16
-tray-padding = 0
-tray-scale = 1
+#tray-detached = false
+#tray-position = right
+#tray-offset-x = 0
+#tray-offset-y = 0
+#tray-maxsize = 16
+#tray-padding = 0
+#tray-scale = 1
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -89,13 +89,13 @@ padding-right = 1
 offset-x = 0
 offset-y = 0
 
-tray-detached = false
-tray-position = right
-tray-offset-x = 0
-tray-offset-y = 0
-tray-maxsize = 16
-tray-padding = 0
-tray-scale = 1
+#tray-detached = false
+#tray-position = right
+#tray-offset-x = 0
+#tray-offset-y = 0
+#tray-maxsize = 16
+#tray-padding = 0
+#tray-scale = 1
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -272,7 +272,7 @@ format-suffix-foreground = ${self.label-background}
 
 [module/volume]
 type                      		= internal/pulseaudio
-
+interval = 10
 format = <label>
 label-volume = 
 format-muted-background  		= #B6A5C8
