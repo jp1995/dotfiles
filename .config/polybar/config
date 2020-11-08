@@ -399,7 +399,6 @@ interval = 120
 format = <label>
 label = "%output:0:30%"
 exec = .config/polybar/pkg.sh
-exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 label-background = ${colors.t3}
 format-underline = ${colors.cyan}

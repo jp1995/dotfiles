@@ -11,6 +11,7 @@ exec --no-startup-id /home/johan/.screenlayout/main_layout.sh
 exec --no-startup-id /usr/bin/xfce4-power-manager
 exec --no-startup-id /home/johan/scripts/layout.sh
 exec --no-startup-id atom /home/johan/.config/i3/config
+exec --no-startup-id atom /home/johan/scripts/kpl/kpl_local_main.sh
 exec --no-startup-id dropbox
 exec --no-startup-id picom
 exec --no-startup-id firefox
