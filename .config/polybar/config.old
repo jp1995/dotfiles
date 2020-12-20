@@ -1,0 +1,502 @@
+[colors]
+transparent = #00000000
+foreground  = #3c3836
+background  = #25232A
+
+black       = ${xrdb:color8}
+red         = ${xrdb:color9}
+green       = ${xrdb:color10}
+yellow      = ${xrdb:color11}
+blue        = ${xrdb:color12}
+magenta     = ${xrdb:color13}
+cyan        = ${xrdb:color14}
+white       = ${xrdb:color15}
+grey        = #928374
+
+bblack    = ${xrdb:color0}
+bred      = ${xrdb:color1}
+bgreen    = ${xrdb:color2}
+byellow   = ${xrdb:color3}
+bblue     = ${xrdb:color4}
+bmagenta  = ${xrdb:color5}
+bcyan     = ${xrdb:color6}
+bwhite    = ${xrdb:color7}
+bgrey     = #7c6f64
+
+
+t1		= #332D35
+t2		= #7D6297
+t6		= #CAB8D1
+
+t3		= #AD9CC3
+t4  	= #B6A5C8
+t5		= #C0AECD
+t7		= #D3C1D6
+t8		= #DDCADB
+
+[bar/main]
+monitor = DisplayPort-2
+bottom = false
+width = 1920
+height = 25
+
+override-redirect = false
+enable-ipc = true
+
+padding-left = 0
+padding-right = 1
+offset-x = 0
+offset-y = 0
+
+#tray-detached = false
+#tray-position = right
+#tray-offset-x = 0
+#tray-offset-y = 0
+#tray-maxsize = 16
+#tray-padding = 0
+#tray-scale = 1
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+border-left-size = 15
+border-right-size = 15
+border-color = ${self.background}
+
+# For this to work you need:
+# adobe-source-sans-pro-fonts
+# ttf-font-awesome-4 (AUR)
+# and then some powerline font i cant remember 4HEad
+
+font-0 = Source Sans Pro:style:SemiBold:size=10;2
+font-1 = Font Awesome:size=10;2
+font-2 = PowerlineSymbols:size=18;2
+
+modules-left = i3
+modules-right  =  pkg volume temps weather clock
+
+[bar/right]
+monitor = DisplayPort-1
+bottom = false
+width = 1920
+height = 25
+
+override-redirect = false
+enable-ipc = true
+
+padding-left = 0
+padding-right = 1
+offset-x = 0
+offset-y = 0
+
+#tray-detached = false
+#tray-position = right
+#tray-offset-x = 0
+#tray-offset-y = 0
+#tray-maxsize = 16
+#tray-padding = 0
+#tray-scale = 1
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+border-left-size = 15
+border-right-size = 15
+border-color = ${self.background}
+
+font-0 = Source Sans Pro:style:SemiBold:size=10;2
+font-1 = Font Awesome:size=10;2
+font-2 = PowerlineSymbols:size=18;2
+
+modules-left = i3
+modules-right  =  pkg volume temps weather clock
+
+
+
+[module/mpd]
+type                  = internal/mpd
+
+label-song            =   %artist% - %title%
+label-song-maxlen     = 40
+label-song-ellipsis   = true
+
+format-online         = <label-song><toggle>
+# <icon-prev>    <icon-seekb>  <toggle>  <icon-seekf>    <icon-next>     <icon-random>  <icon-repeat>
+
+label-song-foreground = ${colors.foreground}
+label-song-background = ${colors.t5}
+icon-pause-background = ${self.label-song-background}
+icon-play-background  = ${self.label-song-background}
+icon-pause-foreground = ${self.label-song-foreground}
+icon-play-foreground  = ${self.label-song-foreground}
+
+label-song-padding = 2
+icon-pause-padding-right = 2
+icon-play-padding-right = 2
+
+icon-prev  = 
+icon-seekb = 
+icon-stop  = 
+icon-pause = 
+icon-play  = 
+icon-next  = 
+icon-seekf = 
+
+icon-random = 
+icon-repeat = 
+toggle-off-foreground = ${colors.grey}
+toggle-on-foreground  = ${colors.blue}
+
+
+format-online-prefix            = 
+format-online-prefix-foreground = ${module/xwindow.format-background}
+format-online-prefix-background = ${self.label-song-background}
+
+format-online-suffix            = 
+format-online-suffix-foreground = ${self.label-song-background}
+
+
+
+[module/memory]
+type             = internal/memory
+interval         = 2
+format           = <label>
+
+label            =  %percentage_used%%
+
+label-background = ${colors.t5}
+format-underline = ${colors.cyan}
+label-padding   =  2
+
+format-prefix            = 
+format-prefix-background = #D3C1D6
+format-prefix-foreground = ${self.label-background}
+
+format-suffix            = 
+format-suffix-background = ${self.label-background}
+format-suffix-foreground = ${module/cpu.format-background}
+
+
+[module/cpu]
+format-label       = internal/cpu
+
+format             = <label>
+format-background = ${colors.t3}
+format-padding     = 2
+
+type      = internal/cpu
+interval  = 2
+label     =  %percentage%%
+padding   = 0
+
+[module/wlan]
+type      = internal/network
+interface = wlp3s0
+interval  = 3.0
+
+label-connected-padding      = 2
+label-disconnected-padding   = 2
+
+format-connected              = <label-connected>
+format-disconnected           = <label-disconnected>
+
+label-connected-foreground    = ${colors.foreground}
+label-connected-background    = ${colors.t7}
+
+label-disconnected-foreground    = ${colors.bgrey}
+label-disconnected-background    = ${colors.t7}
+
+label-connected    =  %essid%
+label-disconnected = 
+
+
+format-connected-prefix               = 
+format-connected-prefix-background    = ${module/cpu.format-background}
+format-connected-prefix-foreground    = ${self.label-connected-background}
+
+format-disconnected-prefix            = 
+format-disconnected-prefix-background = ${module/cpu.format-background}
+format-disconnected-prefix-foreground = ${self.label-connected-background}
+
+
+[module/eth]
+type                          = internal/network
+interface                     = enp0s25
+interval                      = 3.0
+
+format-connected              = <label-connected>
+format-disconnected           = <label-disconnected>
+
+label-connected-padding      = 2
+label-disconnected-padding      = 2
+
+label-connected               =  connected
+label-disconnected            = 
+
+label-connected-foreground    = ${colors.foreground}
+label-connected-background    = ${colors.t7}
+
+label-disconnected-foreground    = ${colors.bgrey}
+label-disconnected-background    = ${colors.t7}
+
+format-connected-suffix               = 
+format-connected-suffix-foreground    = ${module/battery.format-background}
+format-connected-foreground           = ${self.label-connected-background}
+
+format-disconnected-suffix            = 
+format-disconnected-suffix-foreground = ${module/battery.format-background}
+format-disconnected-suffix-background = ${self.label-connected-background}
+
+
+[module/date]
+type     = internal/date
+interval = 2
+
+date     = " %d.%m.%Y"
+date-alt = "  %A, %d. %B"
+
+time     = " %H:%M"
+time-alt = "%H:%M:%S"
+
+label-background = ${colors.t7}
+#label-foreground = ${colors.cyan}
+label-padding = 2
+format-padding   = 0
+format           = <label>
+label            = %time% | %date%
+
+format-prefix            = 
+format-prefix-foreground = ${self.label-background}
+format-suffix            = 
+format-suffix-foreground = ${self.label-background}
+
+[module/volume]
+type                      		= internal/pulseaudio
+interval = 10
+format = <label>
+label-volume = 
+format-muted-background  		= #B6A5C8
+format-volume-background  		= #B6A5C8
+
+format-volume 					= <label-volume> <bar-volume>
+format-muted  					= <label-muted>
+
+label-muted   					=   sound muted
+format-muted-padding 		= 0
+format-padding 					= 2
+
+bar-volume-width                = 8
+bar-volume-gradient             = false
+bar-volume-indicator            = 
+bar-volume-indicator-font       = 4
+bar-volume-indicator-foreground = #25232A
+bar-volume-fill                 = 
+bar-volume-fill-font            = 4
+bar-volume-fill-foreground     	= #25232A
+bar-volume-empty                = 
+bar-volume-empty-font           = 4
+bar-volume-empty-foreground 	= #25232A
+
+bar-volume-background 			= ${colors.t4}
+label-muted-background 			= ${colors.t4}
+
+bar-volume-empty-background		= #B6A5C8
+bar-volume-fill-background		= #B6A5C8
+bar-volume-indicator-background	= #B6A5C8
+
+format-volume-prefix 			= 
+format-volume-prefix-foreground = #B6A5C8
+format-volume-prefix-background = #DDCADB
+
+format-volume-suffix 			= 
+format-volume-suffix-foreground = #D3C1D6
+format-volume-suffix-background = #B6A5C8
+
+format-muted-prefix 			= 
+format-muted-prefix-foreground 	= #B6A5C8
+format-muted-prefix-background 	= #DDCADB
+
+format-muted-suffix 			= 
+format-muted-suffix-foreground 	= #D3C1D6
+format-muted-suffix-background 	= #B6A5C8
+
+
+[module/temperature]
+type                  = internal/temperature
+thermal-zone          = 0
+warn-temperature      = 80
+
+format             = <ramp><label>
+format-background  = ${colors.t5}
+label-background   = ${colors.t5}
+label-padding = 2
+
+format-prefix                 = 
+format-prefix-background      = ${module/battery.format-background}
+format-prefix-foreground      = ${self.label-background}
+
+format-suffix                 = 
+format-suffix-foreground      = ${self.label-background}
+
+format-warn-prefix            = 
+format-warn-prefix-background = ${module/battery.format-background}
+format-warn-prefix-foreground = ${self.label-warn-background}
+
+format-warn-suffix            = 
+format-warn-suffix-foreground = ${self.label-warn-background}
+
+format-warn           = <label-warn>
+label-warn-background = ${colors.t2}
+
+ramp-background       = ${colors.t5}
+
+label                 = %temperature%
+label-warn            =  %temperature%
+
+ramp-0 = "   "
+ramp-1 = "   "
+ramp-2 = " "
+
+[module/weather]
+type = custom/script
+interval = 120
+format = <label>
+exec = .config/polybar/weather.sh
+
+label-background = ${colors.t7}
+format-underline = ${colors.cyan}
+label-padding   =  2
+
+format-prefix            = 
+format-prefix-background = #B6A5C8
+format-prefix-foreground = ${self.label-background}
+
+format-suffix            = 
+format-suffix-background = ${self.label-background}
+format-suffix-foreground = #AD9CC3
+
+[module/clock]
+type = custom/script
+interval = 1
+format = <label>
+exec = .config/polybar/clock.sh
+
+label-background = ${colors.t8}
+format-underline = ${colors.cyan}
+label-padding   =  2
+
+format-prefix            = 
+format-prefix-background = #AD9CC3
+format-prefix-foreground = ${self.label-background}
+
+format-suffix            = 
+format-suffix-background = #DDCADB
+format-suffix-foreground = #25232A
+
+[module/pkg]
+type = custom/script
+interval = 120
+format = <label>
+label = "%output:0:30%"
+exec = .config/polybar/pkg.sh
+
+label-background = ${colors.t3}
+format-underline = ${colors.cyan}
+label-padding   =  2
+
+format-prefix            = 
+format-prefix-background = #25232A
+format-prefix-foreground = ${self.label-background}
+
+format-suffix            = 
+format-suffix-background = ${self.label-background}
+format-suffix-foreground = #DDCADB
+
+[module/temps]
+type = custom/script
+interval = 1
+format = <label>
+exec = .config/polybar/cputemp.sh
+
+label-background = ${colors.t5}
+format-underline = ${colors.cyan}
+label-padding   =  2
+
+format-prefix            = 
+format-prefix-background = #D3C1D6
+format-prefix-foreground = ${self.label-background}
+
+format-suffix            = 
+format-suffix-background = ${self.label-background}
+format-suffix-foreground = #B6A5C8
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = false
+strip-wsnumbers = true
+index-sort = true
+
+; Use fuzzy (partial) matching on labels when assigning
+; icons to workspaces
+; Example: code;♚ will apply the icon to all workspaces
+; containing 'code' in the label
+; Default: false
+fuzzy-match = true
+
+label-dimmed-underline = ${root.background}
+
+; Available tags:
+;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
+;   <label-mode> (default)
+format = <label-state> <label-mode>
+
+; Available tokens:
+;   %mode%
+; Default: %mode%
+label-mode = %mode%
+label-mode-padding = 0
+label-mode-background = #e60053
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-focused =  %index%
+label-focused-foreground = #ffffff
+label-focused-background = #BB4600
+label-focused-underline = #fba922
+label-focused-padding = 4
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-unfocused = %index%
+label-unfocused-padding = 4
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-visible = %index%
+label-visible-underline = #B6A5C8
+label-visible-padding = 4
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-urgent = %index%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 4
+

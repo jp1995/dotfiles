@@ -5,7 +5,7 @@
 set $mod Mod4
 
 #Autostart on startup
-exec_always --no-startup-id feh --bg-scale /home/johan/Pictures/aenami1.jpg
+exec_always --no-startup-id feh --bg-scale /home/johan/Pictures/wp/flower.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch_main.sh
 exec --no-startup-id /home/johan/.screenlayout/main_layout.sh
 exec --no-startup-id /usr/bin/xfce4-power-manager
