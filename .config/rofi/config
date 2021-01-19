@@ -11,13 +11,13 @@ rofi.columns:                        1
 "Font to use" Set from: Default
 rofi.font:                           Dejavu Sans 12
 "Color scheme for normal row" Set from: Default
-rofi.color-normal:                   #25232A,#E2DCCC,#25232A,#C0AECD,#25232A
+rofi.color-normal:                   #25232A,#E2DCCC,#25232A,#C07C69,#25232A
 "Color scheme for urgent row" Set from: Default
-rofi.color-urgent:                   #25232A,#E2DCCC,#25232A,#C0AECD,#25232A
+rofi.color-urgent:                   #25232A,#E2DCCC,#25232A,#C07C69,#25232A
 "Color scheme for active row" Set from: Default
-rofi.color-active:                   #25232A,#E2DCCC,#25232A,#C0AECD,#25232A
+rofi.color-active:                   #25232A,#E2DCCC,#25232A,#C07C69,#25232A
 "Color scheme window" Set from: Default
-rofi.color-window:                   #25232A,#C0AECD
+rofi.color-window:                   #25232A,#C07C69
 ######################################BG_Dark, Text, BG_Light, BG_Active, Text_Active
 "Border width" Set from: Default
 rofi.bw:                             1

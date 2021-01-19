@@ -10,7 +10,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch_main.sh
 exec --no-startup-id /home/johan/.screenlayout/main_layout.sh
 exec --no-startup-id /usr/bin/xfce4-power-manager
 exec --no-startup-id /home/johan/scripts/layout.sh
-exec --no-startup-id vim /home/johan/.config/i3/config -c "tabedit /home/johan/.config/polybar/config"
+exec --no-startup-id kitty vim /home/johan/.config/i3/config -c "tabedit /home/johan/.config/polybar/config"
+exec --no-startup-id kitty sh -c 'neofetch; bash'
 exec --no-startup-id dropbox
 exec --no-startup-id picom
 exec --no-startup-id firefox
@@ -19,7 +20,6 @@ exec --no-startup-id firefox
 bindsym $mod+l exec /home/johan/i3lm/layout_manager.sh
 bindsym $mod+f exec /home/johan/scripts/dolphin.sh
 bindsym $mod+c exec /home/johan/scripts/show_desktop.sh
-bindsym $mod+a exec /home/johan/scripts/sharenix.sh
 bindsym $mod+x exec /home/johan/scripts/kpl/kpl_local_main.sh
 bindsym $mod+space exec /home/johan/scripts/keymap.sh
 bindsym $mod+Shift+q exec /home/johan/scripts/powermenu.sh
@@ -31,6 +31,7 @@ bindsym $mod+d exec rofi -show run -m DisplayPort-2
 bindsym $mod+q kill
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+f fullscreen toggle
+bindsym --release $mod+a exec /home/johan/scripts/sharenix.sh
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -70,6 +71,7 @@ workspace 22 output DisplayPort-1
 #General gaps values
 gaps inner 10
 gaps outer 0
+smart_gaps on
 
 # Workspace specific gaps values:
 workspace 2 gaps inner 15

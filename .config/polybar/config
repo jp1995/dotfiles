@@ -94,7 +94,7 @@ format = <label>
 exec = .config/polybar/clock.sh
 
 label-background = ${colors.c1}
-label-padding   =  2
+label-padding   =  4
 
 format-suffix            = 
 format-suffix-background = ${colors.c1}
@@ -108,7 +108,7 @@ format = <label>
 exec = .config/polybar/weather.sh
 
 label-background = ${colors.c2}
-label-padding   =  2
+label-padding   =  4
 
 format-suffix            = 
 format-suffix-background = ${self.label-background}
@@ -122,7 +122,7 @@ format = <label>
 exec = .config/polybar/cputemp.sh
 
 label-background = ${colors.c3}
-label-padding   =  2
+label-padding   =  4
 
 format-suffix            = 
 format-suffix-background = ${self.label-background}
@@ -131,18 +131,21 @@ format-suffix-foreground = ${colors.c2}
 
 [module/volume]
 type                      		= internal/pulseaudio
+use-ui-max = false
 interval = 10
 format = <label>
 label-volume = 
 format-muted-background  		= ${colors.c4}
 format-volume-background  		= ${colors.c4}
 
-format-volume 					= <label-volume> <bar-volume>
+format-volume 					= "<label-volume> <bar-volume>     "
 format-muted  					= <label-muted>
 
 label-muted   					=   sound muted
-format-muted-padding 		= 0
-format-padding 					= 2
+label-muted-padding 		= 4
+label-volume-padding-left 	= 4
+bar-volume-indicator-padding-right = 0
+bar-volume-empty-padding-left = 0
 
 bar-volume-width                = 8
 bar-volume-gradient             = false
@@ -156,12 +159,7 @@ bar-volume-empty                = 
 bar-volume-empty-font           = 4
 bar-volume-empty-foreground 	= ${colors.bg}
 
-bar-volume-background 			= ${colors.c4}
 label-muted-background 			= ${colors.c4}
-
-bar-volume-empty-background		= ${colors.c4}
-bar-volume-fill-background		= ${colors.c4}
-bar-volume-indicator-background	= ${colors.c4}
 
 format-volume-prefix 			= 
 format-volume-prefix-foreground = ${colors.c4}
@@ -188,7 +186,7 @@ label = "%output:0:30%"
 exec = .config/polybar/pkg.sh
 
 label-background = ${colors.c5}
-label-padding   =  2
+label-padding   =  4
 
 format-prefix            = 
 format-prefix-background = ${colors.bg}
@@ -231,7 +229,7 @@ label-mode-background = #e60053
 ; Default: %icon%  %name%
 label-focused =  %index%
 label-focused-foreground = ${colors.fg}
-label-focused-background = ${colors.c4}
+label-focused-background = ${colors.c5}
 label-focused-underline = #fba922
 label-focused-padding = 4
 
