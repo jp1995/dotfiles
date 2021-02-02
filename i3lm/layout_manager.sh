@@ -68,7 +68,7 @@ if [ -z $1 ]; then
 
   ACTION=$(echo "LOAD LAYOUT
 SAVE LAYOUT
-DELETE LAYOUT" | rofi -i -dmenu -no-custom -p "Select action")
+DELETE LAYOUT" | rofi -i -dmenu -no-custom -m -1 -p "Select action")
 
   if [ -z "$ACTION" ]; then
     exit
@@ -76,7 +76,7 @@ DELETE LAYOUT" | rofi -i -dmenu -no-custom -p "Select action")
 
   # get me layout names based on existing file names in the LAYOUT_PATH
   LAYOUT_NAMES=$(ls -Rt $LAYOUT_PATH | grep "layout.*json" | sed -nr 's/layout-(.*)\.json/\1/p' | sed 's/\s/\n/g' | sed 's/_/ /g') # layout names
-  LAYOUT_NAME=$(echo "$LAYOUT_NAMES" | rofi -i -dmenu -p "Select layout (you may type new name when creating)" | sed 's/\s/_/g') # ask for selection
+  LAYOUT_NAME=$(echo "$LAYOUT_NAMES" | rofi -i -dmenu -m -1 -p "Select layout (you may type new name when creating)" | sed 's/\s/_/g') # ask for selection
   LAYOUT_NAME=${LAYOUT_NAME^^} # upper case
 
 # getting argument from command line
@@ -211,7 +211,7 @@ if [[ "$ACTION" = "SAVE LAYOUT" ]]; then
 
   ACTION=$(echo "DEFAULT (INSTANCE)
 SPECIFIC (CHOOSE)
-MATCH ANY" | rofi -i -dmenu -p "How to identify windows? (xprop style)")
+MATCH ANY" | rofi -i -dmenu -m -1 -p "How to identify windows? (xprop style)")
 
 
   if [[ "$ACTION" = "DEFAULT (INSTANCE)" ]]; then
@@ -365,7 +365,7 @@ MATCH ANY" | rofi -i -dmenu -p "How to identify windows? (xprop style)")
 
         NAME=$(cat $LAYOUT_FILE | sed -n "$(expr ${LINE_NUM} - 4)p" | awk '{$1="";print $0}')
 
-        SELECTED_OPTION=$(cat -n $LAYOUT_FILE | sed -n "${LINE_NUM},$(expr $LINE_NUM + 2)p" | awk '{$2="";print $0}' | rofi -i -dmenu -no-custom -p "Choose the matching method for${NAME%,}" | awk '{print $1}')
+        SELECTED_OPTION=$(cat -n $LAYOUT_FILE | sed -n "${LINE_NUM},$(expr $LINE_NUM + 2)p" | awk '{$2="";print $0}' | rofi -i -dmenu -no-custom -m -1 -p "Choose the matching method for${NAME%,}" | awk '{print $1}')
 
         # when user does not select, choose "instance" (class+1)
         if [ -z "$SELECTED_OPTION" ]; then

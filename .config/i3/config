@@ -7,11 +7,14 @@ set $mod Mod4
 #Autostart on startup
 exec_always --no-startup-id feh --bg-scale /home/johan/Pictures/wp/flower.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch_main.sh
+exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /home/johan/.screenlayout/main_layout.sh
 exec --no-startup-id /usr/bin/xfce4-power-manager
 exec --no-startup-id /home/johan/scripts/layout.sh
-exec --no-startup-id kitty vim /home/johan/.config/i3/config -c "tabedit /home/johan/.config/polybar/config"
-exec --no-startup-id kitty sh -c 'neofetch; bash'
+exec --no-startuo-id sleep 1
+exec --no-startup-id kitty --class vim sh -c 'vim; bash'
+exec --no-startup-id kitty --class neofetch sh -c 'neofetch; bash'
+exec --no-startup-id kitty --class spt sh -c 'spt; bash'
 exec --no-startup-id dropbox
 exec --no-startup-id picom
 exec --no-startup-id firefox
@@ -27,11 +30,12 @@ bindsym $mod+bracketleft exec /home/johan/.config/polybar/launch_main.sh
 bindsym $mod+bracketright exec /home/johan/.config/polybar/launch_right.sh
 bindsym $mod+t exec kitty
 bindsym $mod+w exec firefox
-bindsym $mod+d exec rofi -show run -m DisplayPort-2
+bindsym $mod+d exec rofi -show run -m DisplayPort-2 -width 18 -lines 2 -xoffset 771 -yoffset -468
 bindsym $mod+q kill
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+f fullscreen toggle
 bindsym --release $mod+a exec /home/johan/scripts/sharenix.sh
+bindsym $mod+m exec /home/johan/scripts/micmute.sh
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

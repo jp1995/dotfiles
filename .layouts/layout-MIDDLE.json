@@ -5,15 +5,15 @@
 		"fullscreen_mode": 0,
 		"layout": "splith",
 		"marks": [],
-		"percent": 1,
+		"percent": null,
 		"type": "con",
 		"nodes": [
 		{
 			"border": "normal",
 			"floating": "auto_off",
-			"layout": "splith",
+			"layout": "splitv",
 			"marks": [],
-			"percent": 1,
+			"percent": 0.5,
 			"type": "con",
 			"nodes": [
 			{
@@ -21,72 +21,72 @@
 				"floating": "auto_off",
 				"layout": "splith",
 				"marks": [],
-				"percent": 1,
+				"percent": 0.5,
 				"type": "con",
 				"nodes": [
 				{
-					"border": "normal",
+					"border": "pixel",
+					"current_border_width": 0,
 					"floating": "auto_off",
-					"layout": "splith",
-					"marks": [],
-					"percent": 1,
-					"type": "con",
-					"nodes": [
-					{
-						"border": "normal",
-						"floating": "auto_off",
-						"layout": "splitv",
-						"marks": [],
-						"percent": 0.5,
-						"type": "con",
-						"nodes": [
-						{
-							"border": "pixel",
-							"current_border_width": 0,
-							"floating": "auto_off",
-							"geometry": {
-								"height": 427,
-								"width": 939,
-								"x": 0,
-								"y": 0
-							},
-							"marks": [],
-							"name": "config + (~/.config/i3) - VIM",
-							"percent": 1,
-							"swallows": [
-							{
-								"instance": "^kitty$"
-							}
-							],
-							"type": "con"
-						}
-						]
+					"geometry": {
+						"height": 1080,
+						"width": 640,
+						"x": 0,
+						"y": 0
 					},
+					"marks": [],
+					"name": "johan@kappa:~",
+					"percent": 1,
+					"swallows": [
 					{
-						"border": "pixel",
-						"current_border_width": 0,
-						"floating": "auto_off",
-						"geometry": {
-							"height": 867,
-							"width": 939,
-							"x": 0,
-							"y": 0
-						},
-						"marks": [],
-						"name": "todo + (~) - VIM",
-						"percent": 0.5,
-						"swallows": [
-						{
-							"instance": "^kitty$"
-						}
-						],
-						"type": "con"
+						"class": "^neofetch$"
 					}
-					]
+					],
+					"type": "con"
 				}
 				]
+			},
+			{
+				"border": "pixel",
+				"current_border_width": 0,
+				"floating": "auto_off",
+				"geometry": {
+					"height": 1080,
+					"width": 640,
+					"x": 0,
+					"y": 0
+				},
+				"marks": [],
+				"name": "sh",
+				"percent": 0.5,
+				"swallows": [
+				{
+					"class": "^spt$"
+				}
+				],
+				"type": "con"
 			}
 			]
+		},
+		{
+			"border": "pixel",
+			"current_border_width": 0,
+			"floating": "auto_off",
+			"geometry": {
+				"height": 1080,
+				"width": 640,
+				"x": 0,
+				"y": 0
+			},
+			"marks": [],
+			"name": "[No Name] - - VIM",
+			"percent": 0.5,
+			"swallows": [
+			{
+				"class": "^vim$"
+			}
+			],
+			"type": "con"
 		}
 		]
 }
