@@ -10,6 +10,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch_main.sh
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id /home/johan/.screenlayout/main_layout.sh
 exec --no-startup-id /usr/bin/xfce4-power-manager
+exec --no-startup-id /usr/bin/lxqt-policykit-agent
 exec --no-startup-id /home/johan/scripts/layout.sh
 exec --no-startuo-id sleep 1
 exec --no-startup-id kitty --class vim sh -c 'vim; bash'
@@ -52,25 +53,32 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+set $ws11 "11"
+set $ws12 "12"
 
 set $ws20 "20"
 set $ws21 "21"
 set $ws22 "22"
+set $ws23 "23"
 
 # Putting workspaces on specific screens:
 workspace 1 output HDMI-A-0
-workspace 2 output DisplayPort-2
-workspace 3 output DisplayPort-1
-workspace 4 output HDMI-A-0
-workspace 5 output DisplayPort-2
+workspace 2 output DisplayPort-1
+workspace 3 output DisplayPort-2
+workspace 4 output DisplayPort-0
+workspace 5 output HDMI-A-0
 workspace 6 output DisplayPort-1
-workspace 7 output HDMI-A-0
-workspace 8 output DisplayPort-2
-workspace 9 output DisplayPort-1
+workspace 7 output DisplayPort-2
+workspace 8 output DisplayPort-0
+workspace 9 output HDMI-A-0
+workspace 10 output DisplayPort-1
+workspace 11 output Displayport-2
+workspace 12 output DisplayPort-0
 
 workspace 20 output HDMI-A-0
-workspace 21 output DisplayPort-2
-workspace 22 output DisplayPort-1
+workspace 21 output DisplayPort-1
+workspace 22 output DisplayPort-2
+workspace 23 output DisplayPort-0
 
 #General gaps values
 gaps inner 10
